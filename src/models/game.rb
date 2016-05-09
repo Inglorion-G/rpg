@@ -1,11 +1,13 @@
 class Game
 
   attr_accessor :object_locations, :objects, :player
+  attr_reader :key_mapper
 
-  def initialize(map)
+  def initialize(map: map, key_mapper: key_mapper)
     @player = nil
     @stop = false
     @map = map
+    @key_mapper = key_mapper
     @objects = {}
     @object_locations = {}
     @object_locations.merge!(@map.map_hash)
@@ -43,7 +45,7 @@ class Game
   end
 
   def handle_input()
-    c = read_char
+    c = key_mapper.read_char
     system "clear"
 
     case c
