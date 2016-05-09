@@ -1,6 +1,6 @@
 require 'minitest/spec'
 require 'minitest/autorun'
-require_relative '../util/console_formatter.rb'
+require_relative '../lib/console_formatter.rb'
 
 ##
 # Notes:

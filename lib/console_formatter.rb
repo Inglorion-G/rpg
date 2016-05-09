@@ -1,4 +1,3 @@
-
 class ConsoleFormatter
   attr_reader :window_width, :window_height
 
@@ -21,5 +20,4 @@ class ConsoleFormatter
       clear_line
     end
   end
-
 end

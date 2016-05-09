@@ -6,7 +6,7 @@
   "./src/models/thing.rb",
   "./lib/input_parser.rb",
   "./lib/key_mapper.rb",
-  "./util/console_formatter.rb"
+  "./lib/console_formatter.rb"
 ].each { |file| require_relative file }
 
 ##
