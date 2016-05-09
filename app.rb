@@ -1,11 +1,12 @@
 [
   "./src/models/game.rb",
-  "./src/models/user.rb",
+  "./src/models/player.rb",
   "./util/map_utility.rb",
   "./src/models/map.rb",
   "./src/models/thing.rb",
-  "./lib/language_parser.rb",
+  "./lib/input_parser.rb",
   "./lib/key_mapper.rb",
+  "./util/console_formatter.rb"
 ].each { |file| require_relative file }
 
 ##
@@ -29,7 +30,9 @@ key_mapper = KeyMapper.new
 # Dependencies:
 #    * map object
 #    * key_mapper object
-game = Game.new(map: world_map, key_mapper: key_mapper)
+formatter = ConsoleFormatter.new(15, 15)
+parser = InputParser.new
+game = Game.new(map: world_map, formatter: formatter, parser: parser, key_mapper: key_mapper)
 
 ##
 # 5) initialize some objects for the game world
