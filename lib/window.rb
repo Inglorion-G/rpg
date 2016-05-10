@@ -1,9 +1,9 @@
-class ConsoleFormatter
-  attr_reader :window_width, :window_height
+class Window
+  attr_reader :width, :height
 
   def initialize(width, height)
-    @window_width = width
-    @window_height = height
+    @width = width
+    @height = height
   end
 
   def clear_line
@@ -15,9 +15,13 @@ class ConsoleFormatter
   end
 
   def clear_window
-    window_height.times do
+    height.times do
       move_cursor_up
       clear_line
     end
+  end
+
+  def full_clear_window
+    print "\e[2J"
   end
 end

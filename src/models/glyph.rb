@@ -1,6 +1,7 @@
 class Glyph
 
-  def initialize(symbol: "@")
+  def initialize(name: nil, symbol: "@")
+    @name = name
     @symbol = symbol
   end
 

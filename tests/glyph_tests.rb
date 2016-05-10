@@ -17,6 +17,10 @@ describe Glyph do
   it "must not allow access to instance variables" do
     ->{ @glyph.symbol }.must_raise NoMethodError
   end
+
+  it "has a draw method" do
+    @glyph.must_respond_to(:draw)
+  end
   
 end
 
@@ -27,6 +31,12 @@ describe GlyphFactory do
   end
 
   it "creates a Glyph object" do
-    @glyph_factory.build_glyph.must_be_instance_of Glyph
+    @glyph_factory.create_glyph.must_be_instance_of Glyph
   end
+
+  it "can create a glyph object with a specific symbol" do
+    glyph_1 = @glyph_factory.create_glyph(symbol: "@")
+    glyph_1.draw
+  end
+  
 end

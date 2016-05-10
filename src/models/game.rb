@@ -1,16 +1,16 @@
 class Game
 
   attr_accessor :object_locations, :objects, :player
-  attr_reader :formatter, :key_mapper, :stop, :parser, :key_mapper
+  attr_reader :window, :key_mapper, :stop, :parser, :key_mapper
 
   protected :stop, :parser
 
-  def initialize(map: map, formatter: formatter, parser: parser, key_mapper: key_mapper)
+  def initialize(map: map, window: window, parser: parser, key_mapper: key_mapper)
     @player = nil
     @stop = false
     @map = map
     @key_mapper = key_mapper
-    @formatter = formatter
+    @window = window
     @parser = parser
     @objects = {}
     @object_locations = {}
@@ -21,7 +21,7 @@ class Game
 
   def run_game
     until @stop
-      formatter.clear_window
+      window.clear_window
       print @map.draw(15, 15, @object_locations)
       self.handle_input
       self.update_locations

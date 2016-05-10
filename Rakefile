@@ -1,7 +1,7 @@
 task default: %w[test game]
 
 task :test do
-  ruby "tests/console_formatting_tests.rb"
+  ruby "tests/window_tests.rb"
   ruby "tests/glyph_tests.rb"
 end
 

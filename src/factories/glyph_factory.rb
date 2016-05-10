@@ -2,12 +2,12 @@ require_relative "../models/glyph.rb"
 
 class GlyphFactory
 
-  def initialize(symbol_map: nil)
+  def initialize(symbol_map: {})
     @symbols = symbol_map
   end
 
-  def build_glyph
-    return Glyph.new
+  def create_glyph(symbol: " ")
+    return Glyph.new(symbol: symbol)
   end
 
 end
