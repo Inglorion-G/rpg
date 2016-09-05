@@ -60,5 +60,4 @@ class KeyMapper
     end
     
   end
-
 end
