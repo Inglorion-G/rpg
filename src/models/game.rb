@@ -5,7 +5,7 @@ class Game
 
   protected :stop, :parser
 
-  def initialize(map: map, window: window, parser: parser, key_mapper: key_mapper)
+  def initialize(map:, window:, parser:, key_mapper:)
     @player = nil
     @stop = false
     @map = map

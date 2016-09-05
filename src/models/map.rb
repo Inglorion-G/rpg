@@ -1,7 +1,6 @@
 require_relative "../../util/map_utility.rb"
 
 class Map
-
   attr_reader :map_hash
 
   def initialize(map_hash)
@@ -18,5 +17,4 @@ class Map
     end
     snapshot
   end
-
 end

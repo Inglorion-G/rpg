@@ -10,6 +10,7 @@ MAP_ELS = {
 
 def build_farmhouse
   farmhouse = {}
+
   15.times do |x|
     15.times do |y|
       if y.between?(3, 8) && (x == 3 || x == 8)
@@ -25,5 +26,6 @@ def build_farmhouse
       end
     end
   end
+
   farmhouse
 end

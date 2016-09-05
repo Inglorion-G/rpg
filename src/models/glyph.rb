@@ -1,5 +1,4 @@
 class Glyph
-
   def initialize(name: nil, symbol: "@")
     @name = name
     @symbol = symbol
@@ -8,5 +7,4 @@ class Glyph
   def draw
     print @symbol
   end
-
 end

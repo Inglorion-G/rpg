@@ -43,7 +43,7 @@ chest = Chest.new("chest", [4, 5], [sword], game)
 ##
 # 6) initialize the player
 #
-george = Player.new("George", game)
+george = Player.new(name: "George")
 
 ##
 # 7) Run the game
