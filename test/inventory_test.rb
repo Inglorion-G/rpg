@@ -1,5 +1,5 @@
-require 'minitest/spec'
-require 'minitest/autorun'
+# require 'minitest/spec'
+# require 'minitest/autorun'
 require_relative '../src/models/inventory'
 require_relative '../src/models/item'
 require_relative '../src/models/currency'

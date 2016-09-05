@@ -1,8 +1,11 @@
-task default: %w[test game]
+require 'rake/testtask'
 
-task :test do
-  ruby "tests/window_tests.rb"
-  ruby "tests/glyph_tests.rb"
+task default: %w[test]
+
+Rake::TestTask.new do |t|
+  t.libs << 'test'
+  t.test_files = FileList['test/*test.rb']
+  t.warning = false
 end
 
 task :game do
