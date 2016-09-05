@@ -11,7 +11,6 @@ require_relative '../lib/window.rb'
 # 2) Write to a temporary file and seek through that file
 
 describe Window do
-  
   before do
     @window = Window.new(10, 10)
   end
@@ -35,5 +34,4 @@ describe Window do
     10.times { puts "----------"}
     @window.clear_window
   end
-
 end

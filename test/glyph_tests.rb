@@ -1,6 +1,5 @@
 require 'minitest/spec'
 require 'minitest/autorun'
-
 require_relative '../src/models/glyph.rb'
 require_relative '../src/factories/glyph_factory.rb'
 
