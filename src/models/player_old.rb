@@ -1,6 +1,6 @@
 require_relative "../../util/utility.rb"
 
-class Player
+class Playerold
 
   attr_accessor :location, :inventory
   attr_reader :name

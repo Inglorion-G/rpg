@@ -1,7 +1,6 @@
 require_relative "../../util/utility.rb"
 
 class NPC
-
   def initialize
     @alive = true
     @inventory = { gold: 0, silver: 0, copper: 0, items: [] }
@@ -20,5 +19,4 @@ class NPC
     phrases = [ "Hello!", "Hi there.", "Greetings." ]
     puts "Hello!"
   end
-  
 end
