@@ -17,9 +17,5 @@ describe Player do
 
       assert_equal "Tyrion", @player.name
     end
-
-    it "is initialized with an inventory" do
-      assert @player.instance_variable_defined?(:@inventory)  
-    end
   end
 end

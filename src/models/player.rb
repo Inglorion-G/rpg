@@ -1,5 +1,5 @@
 require_relative 'inventory'
-
+require_relative '../modules/moveable'
 class Player
   include Moveable
 
@@ -7,6 +7,5 @@ class Player
 
   def initialize(name: "player_1")
     @name = name
-    @inventory = Inventory.new
   end
 end

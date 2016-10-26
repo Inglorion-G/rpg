@@ -15,13 +15,9 @@ describe Window do
     @window = Window.new(10, 10)
   end
 
-  it "must be an instance of Window" do
-    @window.must_be_instance_of Window
-  end
-
-  it "can must be created with a width and height" do
-    @window.instance_variable_defined?(:@height).must_equal true
-    @window.instance_variable_defined?(:@width).must_equal true
+  it "must be created with a width and height" do
+    assert_respond_to @window, :height
+    assert_respond_to @window, :width
   end
 
   it "can clear one line of console output" do
